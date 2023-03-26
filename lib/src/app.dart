@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sarang_dating_app/src/theme_manager/asset_image_icon_manager.dart';
+import 'package:sarang_dating_app/src/features/authenticate/presentation/sign_up_screen.dart';
 import 'package:sarang_dating_app/src/theme_manager/theme_data_manager.dart';
 
 class AppScreen extends StatelessWidget {
@@ -13,14 +13,11 @@ class AppScreen extends StatelessWidget {
       title: 'Material App',
       //FROM THEME DATA MANAGER
       theme: getApplicationThemeData(),
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Material App Bar'),
-        ),
-        body: const Center(
-          child: Text("Hello World"),
-        ),
-      ),
+      //FROM SIGN UP SCREEN
+      initialRoute: SignUpScreen.routeName,
+      routes: {
+        SignUpScreen.routeName: (context) => const SignUpScreen(),
+      },
     );
   }
 }

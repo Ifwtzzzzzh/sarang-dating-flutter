@@ -3,6 +3,7 @@ import 'package:sarang_dating_app/src/common_widgets/banner_widget.dart';
 import 'package:sarang_dating_app/src/common_widgets/custom_button_widget.dart';
 import 'package:sarang_dating_app/src/common_widgets/custom_text_button_widget.dart';
 import 'package:sarang_dating_app/src/common_widgets/custom_text_field_widget.dart';
+import 'package:sarang_dating_app/src/features/authenticate/presentation/sign_up_age_job_screen.dart';
 import 'package:sarang_dating_app/src/theme_manager/values_manager.dart';
 
 class SignUpScreen extends StatefulWidget {
@@ -60,7 +61,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
               //FROM CUSTOM BUTTON WIDGET
               CustomButtonWidget(
                 title: 'Get Started',
-                onTap: () {},
+                onTap: () {
+                  //NAVIGATE TO SIGN UP AGE JOB SCREEN
+                  Navigator.pushNamed(context, SignUpAgeJobScreen.routeName);
+                },
               ),
               //FROM CUSTOM TEXT BUTTON WIDGET
               CustomTextButtonWidget(

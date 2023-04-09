@@ -3,6 +3,7 @@ import 'package:sarang_dating_app/src/common_widgets/custom_button_widget.dart';
 import 'package:sarang_dating_app/src/common_widgets/custom_text_button_widget.dart';
 import 'package:sarang_dating_app/src/common_widgets/logo_and_tagline_widget.dart';
 import 'package:sarang_dating_app/src/common_widgets/upload_photo_widget.dart';
+import 'package:sarang_dating_app/src/features/likes_you/presentation/explore_people_screen.dart';
 import 'package:sarang_dating_app/src/theme_manager/font_manager.dart';
 import 'package:sarang_dating_app/src/theme_manager/style_manager.dart';
 import 'package:sarang_dating_app/src/theme_manager/values_manager.dart';
@@ -32,6 +33,8 @@ class _SignUpUploadPhotoScreenState extends State<SignUpUploadPhotoScreen> {
               const SizedBox(height: AppSize.s50),
               const UploadPhotoWIdget(),
               const SizedBox(height: 53),
+
+              // NAME
               Text(
                 'Nosa Rahmanda',
                 style: getWhiteTextStyle(
@@ -39,20 +42,31 @@ class _SignUpUploadPhotoScreenState extends State<SignUpUploadPhotoScreen> {
                   fontWeight: FontWeightManager.semiBold,
                 ),
               ),
+
+              // DESCRIPTION
               const SizedBox(height: AppSize.s4),
               Text(
                 '18, Mobile Apps Dev',
                 style: getBlack60TextStyle(),
               ),
+
+              // UPDATE MY PROFILE
               const SizedBox(height: 200),
               CustomButtonWidget(
                 title: 'Update My Profile',
                 onTap: () {},
               ),
+
+              // SKIP FOR NOW
               const SizedBox(height: AppSize.s8),
               CustomTextButtonWidget(
                 title: 'Skip for Now',
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(
+                    context,
+                    ExplorePeopleScreen.routeName,
+                  );
+                },
               ),
             ],
           ),
